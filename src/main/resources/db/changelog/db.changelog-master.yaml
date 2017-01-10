@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: oleg
+      changes:
+        - createTable:
+            tableName: event
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: event_title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: event_description
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: 2
+      author: oleg
+      changes:
+        - sqlFile:
+            encoding: utf8
+            endDelimiter: ;
+            path: sql/2016_11_30_create_tables.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true
+            runInTransaction: true
+            failOnError: true

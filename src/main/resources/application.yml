@@ -1,0 +1,42 @@
+spring:
+      data:
+          mongodb:
+            uri: mongodb://localhost:27017/feeder
+
+      mail:
+          properties.mail.smtp.ssl.enable: true
+          host:
+          username:
+          password:
+
+
+mailConfig:
+      defaultFrom:
+      subject: New vacancy
+
+logging:
+      level.org.springframework: ERROR
+      level.org.hibernate: ERROR
+      level.org.apache.http: ERORR
+
+security:
+      ignored: /**
+      basic:
+          enabled: false
+
+
+management:
+      security:
+          enabled: false
+
+queue:
+      use: false
+
+job:
+      cron: "0 0/10 * * * *"
+      query: qa
+
+
+
+
+
