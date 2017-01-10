@@ -15,8 +15,8 @@ public class UpworkApplication {
 
     public static void main(String args[]){
         Properties keys = new Properties();
-        keys.setProperty("consumerKey", "dc0678ddbf0e4e8e8552a07ab7e79acc");
-        keys.setProperty("consumerSecret", "96ca4956689e9bd1");
+        keys.setProperty("consumerKey", args[0]);
+        keys.setProperty("consumerSecret", args[1]);
         Config config = new Config(keys);
         OAuthClient client = new OAuthClient(config);
         String authzUrl = client.getAuthorizationUrl();
