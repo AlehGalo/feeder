@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * Created by aleh_bahatyrou on 12/6/16.
+ * Created by aleh on 12/6/16.
  */
 @Configuration
 @Profile("dev")

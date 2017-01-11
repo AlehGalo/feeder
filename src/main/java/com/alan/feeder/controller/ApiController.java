@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by aleh_bahatyrou on 12/9/16.
+ * Created by aleh on 12/9/16.
  */
 @RestController
 public class ApiController {
@@ -25,7 +25,7 @@ public class ApiController {
     private MailDefaults mailDefaults;
 
     @PutMapping(value = "/api/config")
-    public String setUpCredentials(@RequestBody ServerConfig config) {
+    public String setUpConfiguration(@RequestBody ServerConfig config) {
         mailDefaults.setDefaultFrom(config.getUsername());
         mailMessageService.initConfig(config);
         return service.initSecretAndToken(config);

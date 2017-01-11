@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * Created by aleh_bahatyrou on 12/2/16.
+ * Created by aleh on 12/2/16.
  */
 @Slf4j
 public class Receiver {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 /**
- * Created by aleh_bahatyrou on 12/8/16.
+ * Created by aleh on 12/8/16.
  */
 @Service("messageServiceFacade")
 @Slf4j

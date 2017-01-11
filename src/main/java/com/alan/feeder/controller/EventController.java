@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by aleh_bahatyrou on 11/23/16.
+ * Created by aleh on 11/23/16.
  */
 @RestController
 public class EventController {

@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 /**
- * Created by aleh_bahatyrou on 11/30/16.
+ * Created by aleh on 11/30/16.
  */
 public interface JobRepository extends MongoRepository<Job,String>{
 

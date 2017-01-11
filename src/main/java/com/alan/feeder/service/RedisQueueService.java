@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by aleh_bahatyrou on 12/6/16.
+ * Created by aleh on 12/6/16.
  */
 @Service("redisQueueService")
 public class RedisQueueService implements MessageService {

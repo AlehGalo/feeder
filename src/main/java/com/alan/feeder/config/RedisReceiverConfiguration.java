@@ -12,7 +12,7 @@ import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericToStringSerializer;
 
 /**
- * Created by aleh_bahatyrou on 12/7/16.
+ * Created by aleh on 12/7/16.
  */
 @Configuration
 @Profile("dev")

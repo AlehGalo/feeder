@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 /**
- * Created by aleh_bahatyrou on 11/23/16.
+ * Created by aleh on 11/23/16.
  */
 @Service
 @Slf4j

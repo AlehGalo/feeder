@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by aleh_bahatyrou on 12/1/16.
+ * Created by aleh on 12/1/16.
  */
 @Service
 @Slf4j

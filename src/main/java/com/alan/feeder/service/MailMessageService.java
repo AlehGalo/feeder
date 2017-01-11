@@ -15,7 +15,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Arrays;
 
 /**
- * Created by aleh_bahatyrou on 12/8/16.
+ * Created by aleh on 12/8/16.
  */
 @Service("mailMessageService")
 @Slf4j

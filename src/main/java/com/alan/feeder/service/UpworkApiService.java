@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Properties;
 
 /**
- * Created by aleh_bahatyrou on 12/2/16.
+ * Created by aleh on 12/2/16.
  */
 @Service
 @Slf4j
