@@ -1,7 +1,9 @@
 spring:
       data:
           mongodb:
-            uri: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/$OPENSHIFT_APP_NAME
+            uri: mongodb://${OPENSHIFT_MONGODB_DB_HOST}:${OPENSHIFT_MONGODB_DB_PORT}/${OPENSHIFT_APP_NAME}
+            username: ${OPENSHIFT_MONGODB_DB_USERNAME}
+            password: ${OPENSHIFT_MONGODB_DB_PASSWORD}
 
       mail:
           properties.mail.smtp.ssl.enable: true
