@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+
+    <title>Feeder status page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+</nav>
+
+<div class="container">
+
+    <div class="starter-template">
+        <br/><br/><br/><br/>
+        <h1>Feeder status page</h1>
+        <br/>
+        <p>Total email recepients count</p>
+        <p th:text="${status.mailCount}"></p>
+        <br/>
+        <p>Total jobs count</p>
+        <p th:text="${status.jobCount}"></p>
+    </div>
+
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

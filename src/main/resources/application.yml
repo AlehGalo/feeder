@@ -35,8 +35,3 @@ queue:
 job:
       cron: "0 0/10 * * * *"
       query: qa
-
-
-
-
-

@@ -1,14 +1,5 @@
-
 package com.alan.feeder.model.upwork;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -19,23 +10,30 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import javax.annotation.Generated;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
-    "snippet",
-    "category2",
-    "job_type",
-    "date_created",
-    "workload",
-    "title",
-    "url",
-    "skills",
-    "duration",
-    "subcategory2",
-    "job_status",
-    "client",
-    "id",
-    "budget"
+        "snippet",
+        "category2",
+        "job_type",
+        "date_created",
+        "workload",
+        "title",
+        "url",
+        "skills",
+        "duration",
+        "subcategory2",
+        "job_status",
+        "client",
+        "id",
+        "budget"
 })
 @Getter
 @Setter
@@ -74,13 +72,11 @@ public class Job implements Serializable {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public Job() {
     }
 
     /**
-     * 
      * @param skills
      * @param budget
      * @param jobType
@@ -96,7 +92,20 @@ public class Job implements Serializable {
      * @param duration
      * @param dateCreated
      */
-    public Job(String snippet, String category2, String jobType, String dateCreated, String workload, String title, String url, List<String> skills, String duration, String subcategory2, String jobStatus, Client client, String id, long budget) {
+    public Job(String snippet,
+               String category2,
+               String jobType,
+               String dateCreated,
+               String workload,
+               String title,
+               String url,
+               List<String> skills,
+               String duration,
+               String subcategory2,
+               String jobStatus,
+               Client client,
+               String id,
+               long budget) {
         this.snippet = snippet;
         this.category2 = category2;
         this.jobType = jobType;
@@ -121,7 +130,9 @@ public class Job implements Serializable {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(snippet).append(category2).append(jobType).append(dateCreated).append(workload).append(title).append(url).append(skills).append(duration).append(subcategory2).append(jobStatus).append(client).append(id).append(budget).append(additionalProperties).toHashCode();
+        return new HashCodeBuilder().append(snippet).append(category2).append(jobType).append(dateCreated).append(
+                workload).append(title).append(url).append(skills).append(duration).append(subcategory2).append(
+                jobStatus).append(client).append(id).append(budget).append(additionalProperties).toHashCode();
     }
 
     @Override
@@ -133,7 +144,16 @@ public class Job implements Serializable {
             return false;
         }
         Job rhs = ((Job) other);
-        return new EqualsBuilder().append(snippet, rhs.snippet).append(category2, rhs.category2).append(jobType, rhs.jobType).append(dateCreated, rhs.dateCreated).append(workload, rhs.workload).append(title, rhs.title).append(url, rhs.url).append(skills, rhs.skills).append(duration, rhs.duration).append(subcategory2, rhs.subcategory2).append(jobStatus, rhs.jobStatus).append(client, rhs.client).append(id, rhs.id).append(budget, rhs.budget).append(additionalProperties, rhs.additionalProperties).isEquals();
+        return new EqualsBuilder().append(snippet, rhs.snippet).append(category2, rhs.category2).append(jobType,
+                                                                                                        rhs.jobType).append(
+                dateCreated,
+                rhs.dateCreated).append(workload, rhs.workload).append(title, rhs.title).append(url, rhs.url).append(
+                skills,
+                rhs.skills).append(duration, rhs.duration).append(subcategory2, rhs.subcategory2).append(jobStatus,
+                                                                                                         rhs.jobStatus).append(
+                client,
+                rhs.client).append(id, rhs.id).append(budget, rhs.budget).append(additionalProperties,
+                                                                                 rhs.additionalProperties).isEquals();
     }
 
 }
