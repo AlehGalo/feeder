@@ -1,7 +1,7 @@
 spring:
       data:
           mongodb:
-            uri: mongodb://localhost:27017/feeder
+            uri: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/feeder
 
       mail:
           properties.mail.smtp.ssl.enable: true
