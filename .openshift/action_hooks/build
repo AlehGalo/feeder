@@ -2,10 +2,20 @@
 export JAVA_HOME=/etc/alternatives/java_sdk_1.8.0
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Apache Maven build tool
+
 if [ ! -d apache-maven-3.3.9 ]; then
   wget http://www.eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
   tar -zxf apache-maven-3.3.9-bin.tar.gz
 fi
+
+# Apache James Mail Server
+#
+#if [ ! -d james-binary-2.3.2.1 ]; then
+#  wget http://ftp.byfly.by/pub/apache.org//james/server/james-binary-2.3.2.1.tar.gz
+#  tar -zxf james-binary-2.3.2.1.tar.gz
+#fi
+#
 
 cd $OPENSHIFT_REPO_DIR
 
