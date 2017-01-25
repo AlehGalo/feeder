@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Created by aleh_bahatyrou on 1/17/17.
+ * Created by aleh on 1/17/17.
  */
 @Controller
-@RequestMapping("/")
 public class UIController {
 
     @Autowired
@@ -21,7 +20,7 @@ public class UIController {
     @Autowired
     private MailRecipientRepository mailRecipientRepository;
 
-    @GetMapping("/abc")
+    @GetMapping("/")
     public ModelAndView listMongoDBProperties() {
         return new ModelAndView("index", "status", new Status(jobRepository.count(), mailRecipientRepository.count()));
     }

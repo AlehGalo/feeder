@@ -1,5 +1,6 @@
 package com.alan.feeder.service;
 
+import com.alan.feeder.model.google.PushNotificationsCredentials;
 import com.alan.feeder.model.upwork.Job;
 import com.alan.feeder.model.upwork.JobRequest;
 import com.alan.feeder.repository.JobRepository;
@@ -15,6 +16,9 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
+
+import static com.alan.feeder.service.MessageServiceFacade.GCM_KEY;
+import static com.alan.feeder.service.MessageServiceFacade.MESSAGE;
 
 /**
  * Created by aleh on 11/23/16.
@@ -37,7 +41,19 @@ public class UpworkService {
     @Autowired
     private MessageService messageServiceFacade;
 
+
+    @Autowired
+    private MessageService<PushNotificationsCredentials> notificationService;
+
     public String getJobs(String query) {
+
+        try {
+            notificationService.sendMessage(new PushNotificationsCredentials(GCM_KEY, MESSAGE));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
         try {
             int offset = 0, count = REQUEST_PAGE_COUNT;
             long total = -1;

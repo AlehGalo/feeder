@@ -32,6 +32,9 @@ management:
 queue:
       use: false
 
+push:
+      use: false
+
 job:
       cron: "0 0/10 * * * *"
       query: qa

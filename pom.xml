@@ -29,6 +29,7 @@
         <apache.commons.lang3.version>3.5</apache.commons.lang3.version>
         <thymeleaf.version>3.0.2.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.1.1</thymeleaf-layout-dialect.version>
+        <gcm.server.version>1.0.2</gcm.server.version>
     </properties>
 
     <dependencies>
@@ -84,6 +85,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ganyo</groupId>
+            <artifactId>gcm-server</artifactId>
+            <version>${gcm.server.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

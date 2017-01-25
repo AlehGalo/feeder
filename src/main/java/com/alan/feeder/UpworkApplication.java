@@ -45,15 +45,15 @@ public final class UpworkApplication {
             HashMap<String, String> token = client.getAccessTokenSet(verifier);
             println("Token: " + token);
             println("consumerKey: " + args[0]);
-            println("consumerSecret "+ args[1]);
+            println("consumerSecret " + args[1]);
             println("oauth_verifier " + oauth_verifier);
         }
         else {
             println(">> Set input parameters [consumerKey], [consumerSecret]");
         }
     }
-    
-    private static void println(String text){
-        println(text);
+
+    private static void println(String text) {
+        System.out.println(text);
     }
 }
