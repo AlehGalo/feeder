@@ -4,6 +4,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 # Apache Maven build tool
 
+cd $OPENSHIFT_DEPENDENCIES_DIR
+
 if [ ! -d apache-maven-3.3.9 ]; then
   wget http://www.eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
   tar -zxf apache-maven-3.3.9-bin.tar.gz
@@ -19,4 +21,4 @@ fi
 
 cd $OPENSHIFT_REPO_DIR
 
-$OPENSHIFT_DATA_DIR/apache-maven-3.3.9/bin/mvn clean package -s .openshift/settings.xml -DskipTests=true
+$OPENSHIFT_DEPENDENCIES_DIR/apache-maven-3.3.9/bin/mvn clean package -s .openshift/settings.xml -DskipTests=true
