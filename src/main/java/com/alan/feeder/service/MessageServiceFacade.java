@@ -15,8 +15,9 @@ import java.util.Date;
 @Slf4j
 public class MessageServiceFacade implements MessageService {
 
-    public static final String GCM_KEY = "APA91bF4DLICAnsh8aIC3cJaUEabFntEmIG2BEMLRvfBolyfchUeR4zA0oSFzuJBFO2gIEmULScTLNhpWvKP0vius5PxFfeC-IdC3evkXj7UslS-27KEE1GG2Qxp8QOR8_7c5GvKDegW";
-    public static final String MESSAGE = "Hi There message";
+    public static final String GCM_KEY = "GCM_KEY";
+    public static final String MESSAGE = "MESSAGE";
+
     @Value("${queue.use}")
     public String useQueue;
 

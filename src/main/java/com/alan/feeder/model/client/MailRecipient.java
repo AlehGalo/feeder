@@ -11,13 +11,7 @@ import javax.validation.constraints.NotNull;
 public class MailRecipient {
 
     @NotNull
-    private String mailAddress;
-
-    @NotNull
-    private String firstName;
-
-    @NotNull
-    private String lastName;
+    private String mailAddress, firstName, lastName;
 
     private String id;
 }

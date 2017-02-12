@@ -17,9 +17,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
-import static com.alan.feeder.service.MessageServiceFacade.GCM_KEY;
-import static com.alan.feeder.service.MessageServiceFacade.MESSAGE;
-
 /**
  * Created by aleh on 11/23/16.
  */
@@ -46,14 +43,6 @@ public class UpworkService {
     private MessageService<PushNotificationsCredentials> notificationService;
 
     public String getJobs(String query) {
-
-        try {
-            notificationService.sendMessage(new PushNotificationsCredentials(GCM_KEY, MESSAGE));
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
         try {
             int offset = 0, count = REQUEST_PAGE_COUNT;
             long total = -1;
@@ -104,7 +93,6 @@ public class UpworkService {
         long start = System.nanoTime();
         List<Job> iterable = StreamSupport.stream(jobs.spliterator(), false).
                 filter(a -> (!idsUsedSet.contains(a.getId()))).collect(Collectors.toList());
-        System.out.println(System.nanoTime() - start + " ns " + iterable.spliterator().getExactSizeIfKnown());
         log.debug(System.nanoTime() - start + " ns " + iterable.spliterator().getExactSizeIfKnown());
         idsUsedSet.addAll(iterable.stream().map(Job::getId).collect(Collectors.toList()));
         return iterable;

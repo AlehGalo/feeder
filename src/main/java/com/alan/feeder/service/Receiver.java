@@ -18,9 +18,8 @@ public class Receiver {
         log.debug("Received <" + message.getClass() + " > " + (message instanceof ArrayList));
         if(message instanceof ArrayList){
             ArrayList list = (ArrayList)message;
-            System.out.println(list.size());
             for (Object obj: list) {
-                System.out.println(obj);
+                log.debug(String.valueOf(obj));
             }
         }
         latch.countDown();

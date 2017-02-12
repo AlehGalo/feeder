@@ -1,14 +1,5 @@
-
 package com.alan.feeder.model.upwork;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Generated;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -19,14 +10,21 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import javax.annotation.Generated;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Generated("org.jsonschema2pojo")
 @JsonPropertyOrder({
-    "server_time",
-    "auth_user",
-    "jobs",
-    "profile_access",
-    "paging"
+        "server_time",
+        "auth_user",
+        "jobs",
+        "profile_access",
+        "paging"
 })
 @Getter
 @Setter
@@ -47,13 +45,11 @@ public class JobRequest implements Serializable {
 
     /**
      * No args constructor for use in serialization
-     * 
      */
     public JobRequest() {
     }
 
     /**
-     * 
      * @param jobs
      * @param authUser
      * @param profileAccess
@@ -75,7 +71,8 @@ public class JobRequest implements Serializable {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder().append(serverTime).append(authUser).append(jobs).append(profileAccess).append(paging).append(additionalProperties).toHashCode();
+        return new HashCodeBuilder().append(serverTime).append(authUser).append(jobs).append(profileAccess).append(
+                paging).append(additionalProperties).toHashCode();
     }
 
     @Override
@@ -87,7 +84,11 @@ public class JobRequest implements Serializable {
             return false;
         }
         JobRequest rhs = ((JobRequest) other);
-        return new EqualsBuilder().append(serverTime, rhs.serverTime).append(authUser, rhs.authUser).append(jobs, rhs.jobs).append(profileAccess, rhs.profileAccess).append(paging, rhs.paging).append(additionalProperties, rhs.additionalProperties).isEquals();
+        return new EqualsBuilder().append(serverTime, rhs.serverTime).append(authUser, rhs.authUser).append(jobs,
+                                                                                                            rhs.jobs).append(
+                profileAccess,
+                rhs.profileAccess).append(paging, rhs.paging).append(additionalProperties,
+                                                                     rhs.additionalProperties).isEquals();
     }
 
 }

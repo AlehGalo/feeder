@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 public class UpworkQueryJob {
 
     public static final String CRON_JOB_STARTED = "Cron job started";
+
     @Autowired
     private UpworkService upworkService;
 
@@ -23,7 +24,6 @@ public class UpworkQueryJob {
     @Scheduled(cron = "${job.cron}")
     public void queryNewJobs() {
         log.debug(CRON_JOB_STARTED);
-        System.out.println(CRON_JOB_STARTED);
         upworkService.getJobs(queryString);
     }
 }

@@ -2,6 +2,7 @@ package com.alan.feeder.service;
 
 import com.alan.feeder.config.MessageQueueConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
  * Created by aleh on 12/6/16.
  */
 @Service("redisQueueService")
+@Profile("dev")
 public class RedisQueueService implements MessageService {
 
     @Autowired
