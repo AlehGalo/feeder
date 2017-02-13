@@ -39,8 +39,8 @@ public class UpworkService {
     private MessageService messageServiceFacade;
 
 
-    @Autowired
-    private MessageService<PushNotificationsCredentials> notificationService;
+//    @Autowired
+//    private MessageService<PushNotificationsCredentials> notificationService;
 
     public String getJobs(String query) {
         try {
